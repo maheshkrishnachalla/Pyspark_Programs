@@ -6,7 +6,7 @@ def load_boring_words():
     with open("D:\\BIGDATA\\Spark\\Spark Data\\boringwords.txt") as f:
         lines = f.readlines()
     for line in lines:
-        boring_words.add(line.rstrip())
+        boring_words.add(line.strip())
     return set(boring_words)
 
 
