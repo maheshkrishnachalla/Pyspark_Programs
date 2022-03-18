@@ -14,13 +14,20 @@ def convert(data):
     return name_set.value
 
 
+def get_amount_and_words(lines):
+    line = lines.split(",")
+    words = line[0]
+    amount = float(line[10])
+    return amount, words
+
+
 spark = SparkSession.builder.master("local").appName("Big data Campaign").enableHiveSupport().getOrCreate()
 
 name_set = spark.sparkContext.broadcast(load_boring_words())
 
 input_data = spark.sparkContext.textFile("D:\\BIGDATA\Spark\\bigdata-campaign-data.csv")
 
-mapped_data = input_data.map(lambda x: (float(x.split(",")[10]), x.split(",")[0]))
+mapped_data = input_data.map(lambda x: get_amount_and_words(x)) #map(lambda x: (float(x.split(",")[10]), x.split(",")[0]))
 
 flatMapped_data = mapped_data.flatMapValues(lambda x: x.split(" ")).map(lambda x: (x[1].lower(), x[0]))
 
