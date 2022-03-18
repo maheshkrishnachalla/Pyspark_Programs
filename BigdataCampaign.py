@@ -7,7 +7,7 @@ def load_boring_words():
         lines = f.readlines()
     for line in lines:
         boring_words.add(line.rstrip())
-    return boring_words
+    return set(boring_words)
 
 
 def convert(data):
