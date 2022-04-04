@@ -4,7 +4,7 @@ from pyspark import SparkConf
 from pyspark.sql import SparkSession
 
 spark_conf = SparkConf()
-spark_conf.set("spark.ap.name", "dataframe read and write")
+spark_conf.set("spark.app.name", "dataframe read and write")
 spark_conf.set("spark.master", "local[*]")
 spark_conf.set("spark.jars", "C:\\Spark\\spark-hive_2.11-2.4.4.jar")
 
