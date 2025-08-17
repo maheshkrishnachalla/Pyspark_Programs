@@ -45,6 +45,6 @@ emp_df.write.mode("overwrite").format("csv")\
     .option("header",True)\
     .save("./output/hist_employee.csv")
 
-#emp_df.show()
+emp_df.show()
 #sys.stdin.readline()
 spark.stop()
