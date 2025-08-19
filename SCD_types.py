@@ -41,9 +41,10 @@ for i in new_cols:
 
 emp_df.printSchema()
 
-emp_df.write.mode("overwrite").format("csv")\
+emp_df.write.mode("overwrite").format("parquet")\
     .option("header",True)\
-    .save("./output/hist_employee.csv")
+    .partitionBy("Department")\
+    .save("./output/parquet/hist_employee")
 
 emp_df.show()
 #sys.stdin.readline()
