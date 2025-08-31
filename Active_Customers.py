@@ -68,6 +68,8 @@ active_customer_df = df.filter(
 # df show
 df.orderBy(desc("date")).show(50)
 
+active_customer_df.explain()
+
 # active customers df show
 active_customer_df.show(50)
 
