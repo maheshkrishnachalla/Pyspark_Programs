@@ -1,0 +1,67 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "address": {
+      "street": "123 Elm St",
+      "city": "Metropolis",
+      "state": "NY",
+      "zip": "10101"
+    },
+    "orders": [
+      {
+        "order_id": "O1001",
+        "order_date": "2025-08-01",
+        "total_amount": 250.75,
+        "items": [
+          {
+            "item_id": "I501",
+            "product_name": "Laptop",
+            "quantity": 1,
+            "price": 250.75
+          }
+        ]
+      },
+      {
+        "order_id": "O1002",
+        "order_date": "2025-08-05",
+        "total_amount": 100.00,
+        "items": [
+          {
+            "item_id": "I502",
+            "product_name": "Wireless Mouse",
+            "quantity": 2,
+            "price": 50.00
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "customer_id": "C002",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "address": {
+      "street": "456 Oak Rd",
+      "city": "Gotham",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "orders": [
+      {
+        "order_id": "O1003",
+        "order_date": "2025-07-21",
+        "total_amount": 300.00,
+        "items": [
+          {
+            "item_id": "I503",
+            "product_name": "Smartphone",
+            "quantity": 1,
+            "price": 300.00
+          }
+        ]
+      }
+    ]
+  }
+]
